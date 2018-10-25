@@ -1,3 +1,21 @@
+![Con2 – Collaboration Hub for Volunteer-Run Conventions in Finland](https://con2.fi/media/uploads/2018/08/23/con2_wide_800.png)
+
+# Con2 distribution of `kubernetes-secret-generator`
+
+This is the Con2 distribution of [`kubernetes-secret-generator`](https://github.com/mittwald/kubernetes-secret-generator), forked to automate & control build process. Other users are recommended to use the upstream.
+
+The only local changes are in `deploy/secret-generator.yaml` to use `con2/kubernetes-secret-generator` instead of the upstream.
+
+To install:
+
+    kubectl apply -f https://raw.githubusercontent.com/con2/kubernetes-secret-generator/con2/deploy/secret-generator-rbac.yaml
+    kubectl apply -f https://raw.githubusercontent.com/con2/kubernetes-secret-generator/con2/deploy/secret-generator.yaml
+
+
+# End of Con2 specific information
+
+Original `README.md` follows.
+
 # Automatically generated secrets for Kubernetes
 
 This repository contains a custom Kubernetes controller that can automatically create
